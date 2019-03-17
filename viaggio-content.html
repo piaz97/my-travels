@@ -1,0 +1,50 @@
+<div id="ViaggioFormContainer">
+    <div id="ViaggioFormBox">
+        <div id="ViaggioFormTitle">
+            <p>Compila i campi per aggiungere un nuovo viaggio</p>
+        </div>
+        <form action="aggiungi-viaggio.php" method="post" enctype="multipart/form-data">
+            <div class="ViaggioInputBox">
+                <img src="img/tripname.svg" alt="" class="ViaggioInputIcon"/>
+                <input class="ViaggioInput" type="text" id="ViaggioName" placeholder="dai un nome al tuo viaggio!" name="Name">
+            </div>
+            <div class="ViaggioInputBox">
+                <img src="img/cityhall.svg" alt="" class="ViaggioInputIcon"/>
+                <input class="ViaggioInput" type="text" id="ViaggioPlace" placeholder="inserisci il comune" name="Place">
+            </div>
+            <div id="ViaggioTimeDesc"><p>Inserisci la durata del tuo viaggio</p></div>
+            <div class="ViaggioTimeBox">
+                <div class="ViaggioDayHoursBox">
+                    <div class="ViaggioLabelBox">
+                        <img src="img/days.svg" alt="" class="ViaggioInputIcon"/>
+                        <label for="ViaggioGiorni">Giorni</label>
+                    </div>
+                    <input class="ViaggioInput" type="number" min="0" max="24" placeholder="0-24" id="ViaggioGiorni" name="Hours">
+                </div>
+                <div class="ViaggioDayHoursBox">
+                    <div class="ViaggioLabelBox">
+                        <img src="img/hours.svg" alt="" class="ViaggioInputIcon"/>
+                        <label for="ViaggioOre">Ore</label>
+                    </div>
+                    <input class="ViaggioInput" type="number" min="0" max="15" placeholder="0-15" id="ViaggioOre"  name="Days">
+                </div>
+            </div>
+            <div id="ViaggioCostBox">
+                <div class="ViaggioLabelBox">
+                    <img src="img/money.svg" alt="" class="ViaggioInputIcon"/>
+                    <label for="ViaggioCosto">Quanto hai pagato?</label>
+                </div>
+                <input type="number" id="ViaggioCosto" placeholder="0-5000" min="0" max="5000" name="Cost">
+            </div>
+            <div class="ViaggioFileBox">
+                <p>Aggiungi un'immagine di copertina!</p>
+                <input class="ViaggioInput" type="file" id="ViaggioImg"  name="Image" accept="image/*">
+                <label for="ViaggioImg">Seleziona</label>
+            </div>
+            <hr id="ViaggioButtonSeparator">
+            <div class="ViaggioButtonBox">
+                <button type="submit" class="ViaggioButton">Aggiungi</button>
+            </div>
+        </form>
+    </div>
+</div>

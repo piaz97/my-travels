@@ -1,0 +1,56 @@
+<div class="LuogoContainer">
+            <div class="LuogoTitoloContainer">
+                <h1 id="LuogoTitolo">Aggiungi una tappa al tuo viaggio!</h1>
+                <span id="LuogoClose"><a href="miei_viaggi.php">x</a></span>
+            </div>
+            <div class="PlaceCenterContainer">
+
+                <div class="PlaceFormContainer">
+                    <form id="PlaceForm" action="aggiungi-tappa.php" method="post" enctype="multipart/form-data">
+
+                            <div class="PlaceInputBox">
+                                <input class="PlaceInput" type="text" id="PlaceName" placeholder="nome del luogo" name="Name">
+                            </div>
+                            <div  class="PlaceInputBox">
+                                <input class="PlaceInput" type="text" id="PlaceAddress" readonly placeholder="indirizzo del luogo" name="Address">
+                            </div>
+                            <div class="PlaceTextArea">
+                                <textarea type="text" id="PlaceDesc" placeholder="descrizione del luogo" name="Description" cols="20" rows="5"></textarea>
+                            </div>
+                            <div id="PlaceRatingBox">
+                                <p>Che voto dai a questo luogo?</p>
+                                <div class="PlaceRate">
+                                    <input type="radio" id="star5" name="Evaluation" value="5" />
+                                    <label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="Evaluation" value="4" />
+                                    <label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="Evaluation" value="3" />
+                                    <label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="Evaluation" value="2" />
+                                    <label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="Evaluation" value="1" />
+                                    <label for="star1" title="text">1 star</label>
+                                </div>
+                            </div>
+                            <div class="PlaceFileBox">
+                                <p>Aggiungi una foto del posto!</p>
+                                <input class="PlaceInput" type="file" id="PlaceImg"  name="Image" accept="image/*">
+                                <label for="PlaceImg">Seleziona</label>
+                            </div>
+                            <hr id="PlaceFormSeparator">
+                            <div class="PlaceButtonContainer">
+                                <button type="submit" class="PlaceButton">Aggiungi Tappa</button>
+                            </div>
+
+                            <input type="hidden" id="PlaceLatitude" name="Latitude">
+                            <input type="hidden" id="PlaceLongitude" name="Longitude">
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="MapContainer">
+                <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                <div id="map"></div>
+            </div>
+        </div>

@@ -1,0 +1,4147 @@
+/*****************************************
+*********SET IMPOSTAZIONI DI BASE*********
+*****************************************/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: Raleway, sans-serif;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    min-height:100vh;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+img {
+    image-orientation: from-image;
+}
+
+
+/**********************************************************
+************CLASSI DI UTILIZZO GLOBALE NEL SITO************
+***********************************************************/
+
+
+/*****************************************
+*********FORMATO DEL TESTO****************
+*****************************************/
+.uppercase {
+    text-transform: uppercase;
+}
+.greater{
+    font-size: 2.5rem;
+}
+.center{
+    text-align: center;
+}
+
+/*****************************************
+*********COLORI DEL TESTO*****************
+*****************************************/
+
+
+/*****************************************
+*************LARGHEZZE********************
+*****************************************/
+._100{
+    width: 100%;
+}
+._90{
+    width: 90%;
+}
+._70{
+    width: 70%;
+}
+._50{
+    width: 50%;
+}
+._45{
+    width: 45%;
+}
+._40{
+    width: 40%;
+}
+._30{
+    width: 30%;
+}
+._20{
+    width: 20%;
+}
+
+/*****************************************
+*********STILE PER I PULSANTI*************
+*****************************************/
+.materialButton{
+    display: block;
+    padding: 0.8rem 0.8rem;
+    margin: 0.5rem auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: font-weight 0.4s ease, background-color 0.4s ease;
+    font-size:1.3rem;
+    color: #fff;
+    background-color: #035c6e;
+    text-decoration: none;
+}
+.materialButton:hover{
+    background-color: #00796B;
+    font-weight: bold;
+}
+.materialButton:focus, input:focus{
+    box-shadow: 0 0 25px royalblue;
+}
+
+.dangerButton{
+    background-color: #D32F2F;
+}
+.dangerButton:hover{
+    background-color: #7f0000;
+}
+.whiteButton{
+    background-color: #fafafa;
+    color: black;
+}
+.whiteButton:hover{
+    background-color: #fafafa;
+}
+.disabledButton{
+    background-color: gray;
+    color: #fafafa;
+}
+.disabledButton:hover{
+    background-color: gray;
+    color: #fafafa;
+    font-weight: normal;
+    cursor: not-allowed;
+}
+.flexButton{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/*****************************************
+******MESSAGGI DI ERRORE  NEI FORM********
+*****************************************/
+.danger{
+    color:darkred;
+    padding: 1rem;
+}
+.success{
+    color:green;
+    padding: 1rem;
+}
+.message{
+    width: 100%;
+    text-align: center;
+    display:none;
+}
+.LoginInputDanger{
+    width: 100%;
+    background: white;
+    outline: 0;
+    border-width: 0 0 2px;
+    padding-bottom: 0.4rem;
+    border-color: transparent;
+    box-shadow: 0 0 2px 5px rgba(244,67,54,1);
+    font-size: 1rem;
+}
+.hidden {
+    display: none;
+}
+.shown{
+    display: block;
+}
+.hideExit .LoginImgContainer span{
+    visibility: hidden !important;
+}
+.hideExit .LoginViewEye{
+    display: none;
+}
+#darkener{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.script{
+    display: none;
+}
+.script-inline{
+    display: none;
+}
+
+/*****************************************
+**************ACCESSIBILITÀ***************
+*****************************************/
+.sr-only {
+    position: absolute;
+    margin: -1px 0 0 -1px;
+    padding: 0;
+    display: block;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+    outline: 0;
+}
+/****NOSCRIPT IL TESTO NON SI VEDE MA VALIDA***********/
+noscript a{
+    color: transparent;
+}
+
+/**********************************************************
+************FINE CLASSI DI UTILIZZO GLOBALE****************
+***********************************************************/
+
+
+/**********************************************************
+*********ELEMENTI INCLUSI IN TUTTE/MOLTE PAGINE************
+***********************************************************/
+
+/*****************************************
+******************BODY********************
+*****************************************/
+body {
+    max-width: 1920px;
+    min-height: 100vh;
+    width: 100%;
+    background: #f2f2f2;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    margin: auto;
+    color: #fefefe;
+}
+/*****************************************
+*************TASTO BACK TO TOP************
+*****************************************/
+.backToTop{
+    position: fixed;
+    display: block;
+    min-height: 25px;
+    min-width: 25px;
+    width:4rem;
+    height: 4rem;
+    bottom: 5%;
+    right: 2%;
+    background-color: #035c6e;
+    border-radius: 10rem;
+    box-shadow: 0 0 4px 2px rgba(10,10,10,0.3);
+    opacity: 0.5;
+    transition: transform 150ms ease-in-out;
+    z-index: 1;
+}
+.backToTop:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.backToTop img{
+    width: 100%;
+    height: 100%;
+    padding: 20%;
+    display: block;
+}
+
+/*****************************************
+***************BREADCRUMB*****************
+*****************************************/
+#breadcrumb{
+    display: block;
+    color: black;
+    width: 90%;
+    padding: 0.2rem;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+#breadcrumb ol, #breadcrumb li, #breadcrumb span, #breadcrumb a{
+    display: inline-block;
+    height: 100%;
+}
+#breadcrumb a{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    border-radius: 0.4rem;
+    padding: 0.4rem 0.6rem;
+    transition: 250ms ease;
+}
+#breadcrumb a:after{
+    content: '\203A';
+    margin-left: 0.5rem;
+    display: inline-block;
+}
+#breadcrumb a:hover{
+    background-color: #0b3954;
+    color: #fff;
+}
+
+/*****************************************
+*********BOX PER ERRORI NON LOGGATO*******
+*****************************************/
+#notLoggedContainer{
+    width: 40%;
+    background-color: white;
+    text-align: center;
+    border-radius:4px;
+    color: #212121;
+    margin: 2rem auto 10rem auto;
+    padding: 3rem;
+    max-height: 25rem;
+}
+#notLoggedContainer h1, #notLoggedContainer em{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+#notLoggedContainer p{
+    font-size: 1rem;
+}
+#notLoggedContainer img{
+    display: block;
+    margin: 0.5rem 1rem;
+    height: 2rem;
+    width: 2rem;
+}
+#notLoggedContainer .emoticon{
+    display: block;
+    margin: 1rem auto;
+    height: 8rem;
+    width: 8rem;
+}
+
+/*****************************************
+*****************FOOTER*******************
+*****************************************/
+#footerContainer{
+    background-color: #0b3954;
+    width:100%;
+    position: relative;
+    bottom: 0;
+}
+#footer{
+    width:100%;
+    padding: 1rem 2rem;
+}
+#titleFooter {
+    width: 30%;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    float: left;
+}
+#titleFooter img {
+    width: 10rem;
+    margin-bottom: 0.5rem;
+}
+#titleFooter h2{
+    font-size: 0.8em;
+    font-weight: normal;
+}
+#menuFooter {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 1em 0;
+}
+.menuFooterBox {
+    width: 30%;
+    text-align: left;
+}
+.menuFooterBox h1{
+    border-bottom: 1px solid white;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+}
+#footer ul {
+    list-style-type: none;
+}
+#footer ul a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #fefefe;
+}
+#footer ul a:hover{
+    color: #5acdd5;
+}
+#footer ul li {
+    margin-bottom: 0.4em;
+}
+#footerCredits {
+    background-color: #212121;
+    width:100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem 3rem 0.3rem 3rem;
+}
+.social{
+    width: 100%;
+}
+.socialIcon{
+    width:100%;
+}
+.socialIcon a{
+    text-decoration: none;
+}
+.socialIcon img{
+    width: 3rem;
+    margin-right: 0.4em;
+    margin-bottom: 0.4rem;
+}
+#footerCredits p {
+    font-size: 0.6rem;
+}
+
+/*****************************************
+*********IMPLEMENTAZIONE MAPPA***********
+*****************************************/
+.MapContainer {
+    display: inline-block;
+    height: 45rem;
+    width: 50%;
+    float:right;
+}
+#map {
+    margin: 0;
+    height: 100%;
+    border: 0;
+}
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+.pac-controls label {
+    font-size: 13px;
+    font-weight: 300;
+}
+#pac-input {
+    background-color: #fff;
+    font-size: 1rem;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    text-overflow: ellipsis;
+    width: 90%;
+}
+#pac-input:focus {
+    border-color: #46a7ae;
+}
+img[src="http://maps.gstatic.com/mapfiles/api-3/images/google_white2.png"], a[href^="http://maps.google.com/maps"]{
+    display:none !important;
+}
+.gmnoprint a, .gmnoprint span {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+/*****************************************
+***************PAGINA 404*****************
+*****************************************/
+.page404Container{
+    width:90%;
+    min-height: 80%;
+    margin: 2rem auto;
+    background-color: #f2f2f2;
+}
+.page404{
+    text-align: center;
+    color: #0b3954;
+}
+.page404 h1{
+    font-size: 4.5rem;
+}
+.page404 h2{
+    font-size: 2.5rem;
+}
+.page404 a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.page404 img{
+    display: inline-block;
+    height: 20rem;
+}
+#compassBox{
+    font-size: 7rem;
+    color: #0b3954;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*****************************************
+**************POPUP LOGIN*****************
+*****************************************/
+.LoginModal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left:0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 2rem;
+    padding-left: 35%;
+    padding-right: 35%;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.LoginContainer {
+    background-color: white;
+    width: 100%;
+}
+.LoginContainer p{
+    text-align: center;
+    color: #46a7ae;
+    font-size: 1rem;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: lighter;
+}
+.LoginContainer a{
+    text-decoration: none;
+    font-size: 1rem;
+}
+.LoginImgContainer {
+    text-align: center;
+    background-color: #035c6e;
+    padding: 0 1rem 1rem 1rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+}
+img.LoginAvatar {
+    display: block;
+    height: 2.5rem;
+    margin: 0 auto;
+}
+.LoginClose {
+    display: block;
+    text-align: right;
+    font-size: 2rem;
+    height: 1.25rem;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+.LoginClose:hover,.LoginClose:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+.LoginInputContainer {
+    width: 100%;
+    padding: 1rem;
+}
+.LoginInputBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.LoginInputIcon {
+    width: 1.2rem;
+    margin-right: 0.6rem;
+}
+.LoginInput{
+    width: 100%;
+    background: white;
+    outline: 0;
+    border-width: 0 0 2px;
+    padding-bottom: 0.4rem;
+    border-color: #035c6e;
+    font-size: 1rem;
+}
+.LoginInput::placeholder{
+    color: #46a7ae;
+    font-size : 1rem;
+}
+.LoginInput:focus {
+    outline: none;
+    border-color: #46a7ae;
+}
+.LoginPassword {
+    width: 100%;
+    margin: 0 0.1rem 0 0;
+}
+.LoginViewEye {
+    display: block;
+    width: 1.5rem;
+    padding: 0 0 0 0.2rem;
+    margin-left: 0.1rem;
+}
+.LoginHr {
+    border: 0.06rem solid #46a7ae;
+    margin-bottom: 1rem;
+}
+.LoginButtonContainer {
+    width: 100%;
+    padding: 1rem;
+    display: block;
+}
+.LoginButton{
+    display: block;
+    background-color: #035c6e;
+    color: white;
+    padding: 0.8rem 0.8rem;
+    margin: 0 auto;
+    border: 1px solid #46a7ae;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 1s ease;
+}
+.LoginButtonDisabled{
+    display: block;
+    background-color: #4a4a4a;
+    color: #aaa;
+    padding: 0.8rem 0.8rem;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    cursor: default;
+    width: 100%;
+}
+.LoginButton:hover {
+    background-color: #46a7ae;
+}
+.LoginLink{
+    font-weight: bold;
+    color: #035c6e;
+    transition: color 1s ease;
+}
+.LoginLink:hover{
+    color: #46a7ae;
+}
+
+
+/**********************************************
+*********MAPPA VISUALIZZAZIONE ITINERARIO******
+**********************************************/
+#itinerarioMap{
+    width: 100%;
+    height: 40rem;
+    display: none;
+}
+#tappaInfoW {
+    color: #212121;
+    text-align: center;
+    word-break: break-all;
+    font-size: 1rem;
+    max-width: 20rem;
+}
+#tappaInfoW img {
+    width: 200px;
+    max-height: 500px;
+}
+
+/**********************************************
+********MENU HAMBURGER ED ELEMENTI NAVBAR******
+**********************************************/
+#menuBurger{
+    float: left;
+    height: 100%;
+}
+#login{
+    float: right;
+    height: 100%;
+}
+#menu, #menu-login, #menu ul, #menu-login ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#menu li, #menu-login li{
+    height: 100%;
+    margin-left: 1.5em;
+}
+#logo{
+    margin-left: 1.3em;
+    height: 100%;
+    float:left;
+    padding: 0.5rem 0;
+}
+#menu span, #menu input{
+    display: none;
+}
+
+/*******************************************
+***VISUALIZZAZIONE MENU MOBILE NO SCRIPT****
+*******************************************/
+#mobileNoScript{
+    display: block;
+}
+.mobileNoScriptContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+    text-align: center;
+}
+.mobileNoScriptTile{
+    padding: 0.5rem;
+    background: #035c6e;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1rem 0.5rem;
+}
+.mobileNoScriptTile img{
+    width:6rem;
+    padding:0.5rem;
+}
+#mobileNoScript a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fefefe;
+}
+#mobileNoScript a:active{
+    color: #5acdd5;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+#mobileMenuReplacement{
+    display: block;
+    height: 3.6rem;
+    width: 3.6rem;
+    z-index: 1;
+    position: absolute;
+    left: 0.5rem;
+}
+#mobileLoginReplacement{
+    display: block;
+    height: 3.6rem;
+    width: 3.6rem;
+    z-index: 1;
+    position: absolute;
+    right: 0.5rem;
+}
+
+/**********************************************
+******PAGINATION - GESTORE PAGINE MULTIPLE*****
+**********************************************/
+.pagination{
+    display: block;
+    width: 100%;
+    margin: 2rem auto;
+    height: 2.5rem;
+    color: #0b3954;
+    text-align: center;
+}
+.pagination li{
+    display: inline-block;
+    text-align: center;
+    width: 2.5rem;
+    height: 100%;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-top: 0.3rem;
+    border: none;
+}
+.pagination li a{
+    display: block;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+.pagination li:hover:not(.disabledPage){
+    font-weight: bold;
+}
+.outerPage{
+    background-color: #0b3954;
+    border-color: #0b3954;
+}
+.outerPage a{
+    color: #fefefe;
+}
+.outerPage:first-of-type, .outerPage:first-of-type a{
+    border-radius: 1rem 0.5rem  0.5rem 1rem;
+}
+.outerPage:last-of-type,  .outerPage:last-of-type a{
+    border-radius: 0.5rem 1rem 1rem 0.5rem;
+}
+.innerPage{
+    border-color: #0b3954;
+}
+.innerPage a{
+    color: #0b3954;
+}
+.disabledPage{
+    background-color: #d6d7d7;
+    color: #4a4a4a;
+    border-color: #4a4a4a;
+    border-radius: 0.5rem;
+}
+
+
+
+
+/*************************************************************************
+*******************INIZIO PAGINE******************************************
+*************************************************************************/
+
+
+/******************************
+*********HOMEPAGE**************
+******************************/
+
+#contenuto{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/*PARTE SUPERIORE---------------------*/
+#start{
+    background: url("../img/mercedes23.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    min-height: 28rem;
+}
+#motto{
+    width: 50%;
+    display: block;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+#motto h1{
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 3.2em;
+    text-align: right;
+}
+#motto p{
+    color: #fff;
+    font-size: 1.0rem;
+    font-weight: lighter;
+    display: none;
+}
+
+/*POPUP CON I 3 SIMBOLI-------------------------*/
+#iconBarContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+#iconBar{
+    width: 80%;
+    margin-top: 1.7rem;
+    text-align: center;
+    padding: 1.5em 0 1.5em 0;
+    background-color: #035c6e;
+    border: 1px solid rgb(229,229,229);
+}
+.iconBox{
+    width: 30%;
+    display: inline-block;
+    margin: 0 auto 0.5em auto;
+}
+.iconContainer{
+    width: 100%;
+}
+.iconBox img{
+    width: 6rem;
+    border-radius: 10em;
+}
+.iconBox p{
+    width: 100%;
+    padding-top: 0.2em;
+}
+#iconBar h1{
+    margin-bottom: 0.7em;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+#iconBar h2{
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+#bottomIconBar{
+    height: 1.7em;
+    width: 1.7em;
+    background-color: #035c6e;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    transform: rotate(45deg) translate(0,-1.4em);
+}
+
+/*CONTENITORE DELLE SPIEGAZIONI CENTRALE--------------*/
+#introContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0c3547;
+    padding: 3rem 4rem;
+}
+.introBox {
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.introBoxText{
+    width: 50%;
+    display: inline-block;
+}
+.introBoxText h1{
+    line-height: 95%;
+    text-align: left;
+    font-size: 2.3rem;
+    margin-bottom: 1.6rem;
+}
+.introBoxText p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.introBox:nth-of-type(2n) .introBoxText{
+    float: right;
+    order: 2;
+}
+.introBox:last-of-type{
+    margin-bottom: 0;
+}
+.introBox img{
+    border: 2px solid #d6d5db;
+    width: 35%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    border-radius: 3px;
+}
+.introBox:nth-of-type(2n+1) img{
+    float: right;
+}
+.introBox:nth-of-type(2n) img{
+    float: left;
+    order: 1;
+}
+
+/*TRE SCHEDE DEL COME FUNZIONA---------------------*/
+#guideContainer{
+    width: 100%;
+    text-align: center;
+    margin-top: 1.7rem;
+    border-radius: 4px;
+}
+#guideBoxContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 3rem 3rem 3rem;
+}
+.guideBox{
+    width: 32%;
+    background-color: #035c6e;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+}
+.guideIconContainer{
+    width: 100%;
+    padding-bottom: 0.5rem ;
+    height: 8rem;
+}
+.guideIconContainer img{
+    height: 100%;
+}
+#guideContainer h1{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    color: #404040;
+}
+#guideContainer h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.9rem;
+}
+#guideContainer p {
+    font-size: 1rem;
+}
+
+/*ULTIME DUE TILES CERCA E CONDIVIDI--------------------------*/
+#buttonBoxContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 1rem 2rem;
+}
+.buttonBox{
+    width: 45%;
+    height: 15rem;
+    float: left;
+    text-align: center;
+    background-size: cover;
+    border-radius: 4px;
+}
+.buttonBox:first-of-type{
+    background-image: url("../img/scopri.jpg");
+}
+.buttonBox:last-of-type{
+    background-image: url("../img/condividi_2.jpg");
+}
+.buttonBox div {
+    background: #fafafa;
+    height: 3rem;
+    width: 40%;
+    margin: 7rem auto 0.5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.4);
+}
+.buttonBox a,.buttonBox a:hover, .buttonBox a:visited{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #212121;
+}
+.buttonBox a:hover{
+    font-size: 1.35rem;
+    -webkit-transition: font-size 0.3s;
+    -moz-transition: font-size 0.3s;
+    -o-transition: font-size 0.3s;
+    transition: font-size 0.3s;
+}
+
+
+/******************************
+*********PAGINA CONTATTI*******
+******************************/
+
+#startContatti{
+    background: url("../img/contatti.jpg") no-repeat bottom;
+    background-size: cover;
+    min-height: 28rem;
+}
+#mottoContatti {
+    display: block;
+    padding-top: 12rem;
+    text-align:center;
+}
+#mottoContatti h1{
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 4rem;
+}
+#contattiContainer{
+    width:80%;
+    margin: 1.5rem auto;
+    background-color:#0b3954;
+    display:flex;
+}
+.contattiBox{
+    width:50%;
+    padding: 2rem 1rem 0 1rem;
+}
+.Contatti h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fefefe;
+}
+.Contatti{
+    text-align: left;
+    color: #fefefe;
+    margin-top: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid #fefefe;
+}
+.contattiBox .Contatti:last-of-type {
+    border-bottom: none;
+}
+.contattiBox .Contatti:first-of-type {
+    margin-top: 0.5rem;
+}
+.Contatti p{
+    font-size: 1.2rem;
+    color: #fefefe;
+}
+.mail{
+    display:inline-block;
+}
+.mail:after{
+    display: block;
+    position: relative;
+    top: 0.5rem;
+    content: '';
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    border-bottom: solid 3px #fff;
+}
+.mail:hover:after{
+    transform: scaleX(1);
+}
+#mapContatti {
+    margin-top: 2rem;
+    height: 21rem;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+    border: 2px solid #fefefe;
+}
+
+/*****************************************
+*********PAGINA CHI SIAMO*****************
+*****************************************/
+#startAbout{
+    background: url("../img/chisiamo.jpg") no-repeat ;
+    background-size: cover;
+    min-height: 28rem;
+}
+#mottoAbout {
+    display: block;
+    padding-top: 12rem;
+    text-align:center;
+}
+#mottoAbout h1{
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 4rem;
+}
+#aboutContainer{
+    width:80%;
+    margin: 0 auto 1.5rem auto;
+    background-color:#0b3954;
+    display:flex;
+}
+.aboutBox{
+    width:100%;
+    padding: 2rem 2.5rem 0 2.5rem;
+}
+.about h1{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #fefefe;
+}
+.about{
+    text-align: justify;
+    color: #fefefe;
+    margin-top: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 2px solid #fefefe;
+}
+.aboutBox .about:last-of-type {
+    border-bottom: none;
+}
+
+.aboutBox .about:first-of-type {
+    margin-top: 0.5rem;
+}
+.about p{
+    font-size: 1.2rem;
+    color: #fefefe;
+}
+.avatar{
+    display: flex;
+    align-items: start;
+}
+.avatar figure{
+    margin-top: 2rem;
+    width:25%;
+    text-align: center;
+}
+.avatar img{
+    height:6rem;
+}
+
+
+/*****************************************
+*********PAGINA CLASSIFICA****************
+*****************************************/
+#startClassifica{
+    background: url("../img/classifica.jpg")  no-repeat top;
+    background-size: cover;
+    min-height: 28rem;
+}
+#mottoClassifica {
+    display: block;
+    padding-top: 8rem;
+    text-align:center;
+}
+#mottoClassifica h1{
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 4rem;
+}
+#classificaContainer{
+    width: 80%;
+    margin: 0 auto 1.5rem auto;
+    background-color:#40a4ad;
+    padding:2rem;
+}
+#podioClassifica{
+    width:100%;
+    text-align:center;
+    overflow: hidden;
+}
+#primoClassifica{
+    width:33%;
+    margin:auto;
+    background-color:#ffffff;
+    border-radius: 4px;
+    border:3px solid #035c6e ;
+}
+.puntiClassifica{
+    text-align:center;
+    border-bottom:3px solid #035c6e ;
+    padding:0.4rem;
+}
+.puntiClassifica p{
+    color: #212121;
+    font-size: 1.2rem;
+}
+.ProfileBoxClassifica {
+    width: 100%;
+    padding:0.4rem;
+    word-wrap: break-word;
+}
+.ProfileBoxClassifica p{
+    color: #212121;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+    overflow: hidden;
+}
+.ProfileBoxClassifica img{
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+.containerProfilePicture{
+    background-color:#FFFFFF;
+    width:8rem;
+    height: 8rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+    border: 2px solid #40a4ad;
+}
+#secondoClassifica{
+    width:33%;
+    margin:1rem auto 2rem auto;
+    background-color:#ffffff;
+    border-radius: 4px;
+    float:left;
+    border:3px solid #035c6e ;
+}
+#terzoClassifica{
+    width:33%;
+    margin:1rem auto 2rem auto;
+    background-color:#ffffff;
+    border-radius: 4px;
+    float:right;
+    border:3px solid #035c6e ;
+    transition: color 0.25s;
+}
+.iconaPodio img{
+    width:4rem;
+}
+#tabellaClassifica{
+    width:100%;
+    font-size: 1.3rem;
+    background-color:#ffffff;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+#tabellaClassifica td, th{
+    border:3px solid #035c6e;
+    text-align:center;
+    padding:1rem 0.5rem 1rem 0.5rem;
+    word-wrap: break-word;
+    color: #212121;
+}
+.posizioneClassifica{
+    width:16%;
+}
+.punteggioClassifica{
+    width:20%;
+}
+#utenteClassifica{
+    width:100%;
+    font-size: 1.3rem;
+    table-layout: fixed;
+    margin-top:2rem;
+    background-color:#0c3547;
+    border-collapse: collapse;
+}
+#utenteClassifica td{
+    color:#ffffff;
+    padding:1rem 0.5rem 1rem 0.5rem;
+    border:3px solid #ffffff;
+    word-wrap: break-word;
+    text-align:center;
+}
+
+/*****************************************
+*********PAGINA CERCA*********************
+*****************************************/
+
+#startSearch{
+    background: url("../img/cerca.jpg") no-repeat;
+    background-size:100% 100%;
+    min-height: 20rem;
+    border-bottom: 0.7rem solid #035c6e;
+}
+#mottoSearch{
+    display: block;
+    padding-top: 10rem;
+    text-align:center;
+}
+.researchBarContainer{
+    height: 3rem;
+    width: 60%;
+    margin: 0 auto;
+}
+.reserachBar{
+    height: 3rem;
+    width: 90%;
+    margin: 0;
+    display: inline-block;
+    float: left;
+    border:3px solid #035c6e;
+    border-radius: 10rem 0 0 10rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+}
+.researchBarContainer button{
+    width: 10%;
+    height: 3rem;
+    border:3px solid #035c6e;
+    border-radius: 0 10rem 10rem 0;
+    background-color: #035c6e;
+    cursor: pointer;
+}
+.researchBarContainer img{
+    height: 2rem;
+    width: 2rem;
+    display: block;
+    margin: 0 auto;
+    transition: 250ms ease ;
+}
+.researchBarContainer img:hover{
+    height: 2.5rem;
+    width: 2.5rem;
+    display: block;
+    margin: 0 auto;
+}
+.coolFilters{
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #f2f2f2;
+    display: flex;
+}
+#filtersContainer{
+    background-color: #035c6e ;
+    width: 80%;
+    display: inline-block;
+    float: left;
+    border-radius: 0 0 3rem 3rem;
+    padding: 1rem 2.2rem;
+}
+.spaceContainer{
+    display: inline-block;
+    flex-grow: 1;
+    width:10%;
+    float: left;
+    background-color: #035c6e ;
+}
+#leftSpace, #rightSpace{
+    margin-top:10%;
+    height: 100%;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+#leftSpace{
+    border-radius:  0 3rem 0 0;
+}
+#rightSpace{
+    border-radius:  3rem 0 0 0;
+}
+.sliderContainer{
+    width: 40%;
+    display: block;
+    float: left;
+    margin: 0 auto 0.2rem auto;
+    font-size: 1.2rem;
+}
+.slider {
+    -webkit-appearance: none;
+    height: 7px;
+    border-radius: 5px;
+    background:#fff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    display: inline-block;
+    width: 75%;
+}
+.slider:hover {
+    opacity: 1;
+}
+.sliderContainer label{
+    display: block;
+}
+.showSliderValue{
+    display: inline-block;
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 0.2rem;
+    border: none;
+    text-align: center;
+    margin-left: 1rem;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #20ae7f;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #46a7ae;
+    cursor: pointer;
+}
+#buttonCerca{
+    border:none;
+    border-radius: 10rem;
+    margin-top: 2rem;
+    margin-left: 5%;
+    background-color: #ffffff;
+    width: 13%;
+    font-size: 2rem;
+    color: #035c6e;
+    text-align: center;
+    transform: scale(1);
+    transition: 250ms ease;
+    cursor: pointer;
+}
+#buttonCerca:hover{
+    transform: scale(1.2);
+}
+
+/*****************************************
+************FILTRI PAGINA CERCA***********
+*****************************************/
+#filtersCheckbox + .hideAndShowLabel + .coolFilters {
+    display: none;
+}
+#filtersCheckbox:checked + .hideAndShowLabel + .coolFilters {
+    display: flex;
+}
+.hideAndShowFilters {
+    background: #035c6e;
+    min-height: 3rem;
+}
+#filtersCheckbox{
+    display: none;
+}
+.hideAndShowLabel{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+}
+.hideAndShowLabel span{
+    display: inline-block;
+    height: 100%;
+}
+.hideAndShowLabel img{
+    display: inline-block;
+    margin-left: 1rem;
+    height: 80%;
+    transform: rotate(0deg);
+    transition: 250ms ease;
+    cursor: pointer;
+}
+#filtersCheckbox:checked + .hideAndShowLabel img{
+    transform: rotate(180deg);
+    transition: 250ms ease;
+}
+
+/*****************************************
+**********RAPPRESENTAZIONE ITINERARI******
+**********PAGINE CERCA E MIEI VIAGGI******
+*****************************************/
+
+#rightTravels{
+    width: 80%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.searchContent{
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.travelProfileContainer {
+    width: 28rem;
+    background-color: white;
+    border-radius: 4px;
+    border-top: 5px solid #035c6e;
+    border-bottom: 5px solid #035c6e;
+    padding-bottom: 0.2rem;
+    margin: 0.5rem auto 2rem auto;
+}
+.travelProfileContainer h1{
+    word-break: break-all;
+}
+.travelProfileContainer fieldset{
+    display: none;
+}
+.leftTravelProfileBox {
+    width: 100%;
+    text-align: center;
+    background-color: #035c6e;
+    padding-bottom: 0.5rem;
+}
+.leftTravelProfileBox h1{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+.leftTravelProfileBox h2{
+    color: #fff;
+    font-size: 1rem;
+}
+.leftTravelProfileBox img{
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+.rightTravelProfileBox {
+    width: 100%;
+}
+.travelFeat{
+    width: 45%;
+    text-align: center;
+    display: inline-block;
+    min-height: 3rem;
+    margin: 0.4rem 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.4rem;
+    border-left: 5px solid #035c6e;
+}
+.travelFeat p{
+    color: #212121;
+    font-size: 1.2rem;
+    display: inline-block;
+    float: right;
+    width: 8rem;
+}
+.travelFeat p img{
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0;
+}
+.travelFeat img{
+    width: 2.2rem;
+    float: left;
+    display: inline-block;
+}
+.autoreItinerario{
+    margin: 0 auto;
+    padding: 1rem;
+    height: 7rem;
+    background-color: #035c6e;
+}
+.autoreItinerario img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    float: left;
+    margin-left: 1rem;
+}
+.autoreInfo{
+    float: left;
+    height: 5rem;
+    margin-left: 2rem;
+    margin-top: 0.6rem;
+}
+.autoreInfo h1{
+    font-size: 1.5rem;
+}
+.autoreInfo h2{
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+#confermaContainer{
+    min-height: 40rem;
+    color: #0b3954;
+    text-align: center;
+    padding: 1rem;
+}
+#confermaContainer h1{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+#confermaContainer h2{
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/*****************************************
+*********PAGINA INSERISCI VIAGGIO*********
+*****************************************/
+#ViaggioCover {
+    background: url("../img/travelling.png")  no-repeat top;
+    background-size: cover;
+    min-height: 20rem;
+}
+#ViaggioTitoloCover {
+    background: url("../img/viaggio.jpg")  no-repeat top;
+    background-size: cover;
+    min-height: 20rem;
+}
+#ViaggioTitolo {
+    display: block;
+    text-align: center;
+    padding-top: 8rem;
+}
+#ViaggioTitolo h1 {
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 4rem;
+}
+#ViaggioFormContainer {
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+}
+#ViaggioFormBox {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 4px 2px rgba(10,10,10,0.3);
+    padding-bottom: 1rem;
+}
+#ViaggioFormBox form{
+    color: #035c6e;
+}
+#ViaggioFormTitle {
+    display: block;
+    width: 100%;
+    background: #035c6e;
+    text-align: Center;
+    height: 4rem;
+    padding-top: 1.4rem;
+    margin-bottom: 2rem;
+}
+#ViaggioFormTitle p {
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+.ViaggioInputBox{
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
+    height:2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.ViaggioInputIcon {
+    width: 2rem;
+    margin-right: 0.5rem;
+    padding: 0.2rem 0 0.2rem 0.2rem;
+    float: left;
+}
+.ViaggioInput{
+    float:right;
+    width: 100%;
+    outline: 0;
+    border-width: 0 0 2px;
+    padding-bottom: 0.2rem;
+    border-color: #035c6e;
+    font-size: 1rem;
+}
+.ViaggioInput::placeholder{
+    font-size : 1rem;
+}
+#ViaggioCostBox {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+#ViaggioCostBox .ViaggioInputIcon {
+    margin: 0 auto;
+    padding: 0;
+}
+#ViaggioCostBox input {
+    width: 100%;
+    border-width: 0 0 2px;
+    padding-bottom: 0.2rem;
+    border-color: #035c6e;
+    font-size: 1rem;
+}
+#ViaggioCostBox input::placeholder{
+    font-size : 1rem;
+    text-align: center;
+}
+#ViaggioTimeDesc{
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+#ViaggioTimeDesc p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.ViaggioTimeBox {
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.ViaggioDayHoursBox {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ViaggioDayHoursBox .ViaggioInput {
+    text-align: center;
+    width: 80%;
+}
+.ViaggioDayHoursBox input::placeholder{
+    text-align: center;
+}
+.ViaggioDayHoursBox .ViaggioInputIcon {
+    margin: 0 auto;
+    padding: 0;
+}
+.ViaggioFileBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.ViaggioFileBox p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.ViaggioFileBox img{
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+#ViaggioButtonSeparator {
+    width: 100%;
+    border: 0.06rem solid #46a7ae;
+    margin-bottom: 1rem;
+}
+.ViaggioLabelBox {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.ViaggioLabelBox label {
+    margin-left: 0.3rem;
+    font-size: 1.1rem;
+    color: #035c6e;
+}
+
+
+/*****************************************
+*********PAGINA AGGIUNGI TAPPA*********
+*****************************************/
+
+.LuogoContainer {
+    width:100%;
+    border-radius: 4px;
+    background-color: white;
+    color: #212121;
+}
+.LuogoTitoloContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #0b3954;
+    width: 100%;
+}
+#LuogoTitolo {
+    margin-left: 10%;
+    font-size: 2rem;
+}
+#LuogoClose {
+    margin-right: 2%;
+}
+#LuogoClose  a{
+    font-size: 3rem;
+    text-decoration: none;
+    transition: color 1s ease;
+}
+#LuogoClose a:hover {
+    color: red;
+}
+.PlaceCenterContainer {
+    display: inline-block;
+    padding: 3rem;
+    width: 50%;
+}
+.PlaceFormContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+#PlaceForm {
+    width: 100%;
+}
+.PlaceInputBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.PlaceInputIcon {
+    width: 1.2rem;
+    margin-right: 0.6rem;
+}
+.PlaceInput{
+    width: 100%;
+    outline: 0;
+    padding: 0.5rem;
+    border: 2px solid #0b3954;
+    font-size: 1rem;
+}
+.PlaceInput::placeholder {
+    font-size: 1rem;
+}
+.PlaceFileBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+.PlaceFileBox p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.PlaceFileBox img{
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+#PlaceFormSeparator {
+    width: 100%;
+    border: 1px solid #0b3954;
+}
+#PlaceRatingBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+#PlaceRatingBox p {
+    font-weight: bolder;
+}
+.PlaceRate {
+    border: 1px solid #46a7ae;
+    border-radius: 4px;
+    height: 3rem;
+    width: 12rem;
+    padding: 0 10px;
+}
+.PlaceRate fieldset{
+    border: none;
+}
+.PlaceRate:not(:checked) label {
+    float: right;
+    width: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+.PlaceRate:not(:checked) label:before {
+    content: '★ ';
+}
+.PlaceRate input:checked ~ label {
+    color: #ffc700;
+}
+.PlaceRate:not(:checked) label:hover, .PlaceRate:not(:checked) label:hover ~ label {
+    color: #deb217;
+}
+.PlaceRate input:checked + label:hover, .PlaceRate input:checked + label:hover ~ label, .PlaceRate input:checked ~ label:hover, .PlaceRate input:checked ~ label:hover ~ label, .PlaceRate label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+.PlaceTextArea {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+#PlaceDesc {
+    resize: none;
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid #0b3954;
+    font-size: 1rem;
+}
+#PlaceDesc::placeholder {
+    font-size: 1rem;
+}
+.PlaceButtonContainer {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+/*****************************************
+*********RAPPRESENTAZIONE TILE TAPPA******
+*****************************************/
+#rightTappa{
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0.2rem 1rem;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: #212121;
+}
+.itinerarioTappaContainer {
+    width: 20rem;
+    background-color: white;
+    border-radius: 4px;
+    margin: 0.5rem auto;
+    border-top: 5px solid #035c6e;
+    border-bottom: 5px solid #035c6e;
+    word-break: break-all;
+}
+.boxNumeroTappa{
+    width:100%;
+    text-align: center;
+    background: white;
+    color: #035c6e;
+    font-size: 1.6rem;
+}
+.leftTappaBox {
+    text-align: center;
+    width: 100%;
+    background-color: #035c6e;
+}
+.leftTappaBox h1{
+    color: #fff;
+    font-size: 1.34em;
+    margin-bottom: 0.4rem;
+}
+.leftTappaBox img{
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+.rightTappaBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.tappaFeat{
+    width: 100%;
+    text-align: left;
+    min-height: 3rem;
+    margin: 0.4rem 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.4rem;
+    border-left: 5px solid #035c6e;
+}
+.tappaFeat p{
+    color: #212121;
+    font-size: 1.2rem;
+    display: inline-block;
+    float: right;
+    width: 75%;
+    margin-left: 1rem;
+}
+.tappaFeat p img{
+    height: 1.6rem;
+    width: 1.6rem;
+    margin: 0;
+}
+.tappaFeat img{
+    width: 15%;
+    float: left;
+    display: inline-block;
+}
+/*****************************************
+*********PAGINA VISUALIZZA ITINERARIO*****
+*****************************************/
+#rightItinerario{
+    display: inline-block;
+    width: 80%;
+}
+#rightTopItinerario{
+    width: 100%;
+    padding: 2rem 1rem 1rem 1rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: #212121;
+    word-break: break-all;
+}
+#topShowItinerario{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7rem;
+    flex-wrap: wrap;
+}
+#topShowItinerario h1{
+    width: 100%;
+    font-size: 2rem;
+}
+#votoItinerario{
+    width: 20rem;
+    margin: 0 auto;
+}
+#votoItinerario img {
+    width: 2rem;
+}
+#sceltaItinerario{
+    width: 100%;
+}
+#sceltaItinerario ul{
+    height: 100%;
+    padding: 0.4rem 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+#sceltaItinerario li{
+    height: 100%;
+    width: 6rem;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+.vistaSelezionata{
+    border-bottom: 4px solid #035c6e;
+}
+#sceltaItinerario li img{
+    margin-right: 0.3rem;
+    width: 2rem;
+}
+#sceltaItinerario li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+/*****************************************
+*********SEZIONI COMMENTI*****************
+*****************************************/
+#containerCommenti{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    color: #212121;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+#containerCommenti h1{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    text-align: left;
+}
+#containerCommenti img{
+    width: 4rem;
+    display: inline-block;
+    margin-right: 2rem;
+}
+#numeroCommentiBox{
+    height: 2rem;
+    width: 100%;
+    text-align: left;
+    display: flex;
+}
+#numeroCommentiBox div{
+    border-bottom: 4px solid darkgrey;
+    height: 100%;
+    width: 10rem;
+    text-align: center;
+}
+#numeroCommentiBox div:last-of-type{
+    width: 85%;
+    border-bottom: 4px solid #ddd;
+}
+#creaCommento{
+    width: 100%;
+    margin: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 2rem;
+}
+#creaCommento form{
+    display: inline-flex;
+    align-items: center;
+}
+#creaCommento form textarea{
+    margin-right: 2rem;
+}
+#creaCommento h2{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.commentoContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.rightCommento{
+    display: inline-block;
+    width: 80%;
+}
+.commento{
+    width: 100%;
+    display: inline-block;
+    margin: 2rem 1rem;
+    word-break: break-all;
+}
+.topCommento{
+    margin-bottom: 0.3rem;
+}
+.topCommento h1{
+    font-weight: bold;
+    font-size: 1.5rem !important;
+    margin: 0 0.4rem 0 0;
+    display: inline;
+}
+.topCommento h2{
+    font-weight: lighter;
+    color: #035c6e;
+    display: inline;
+}
+.commentoContent{
+    word-break: break-all;
+}
+
+
+/*****************************************
+*********SEZIONE VALUTAZIONI**************
+*****************************************/
+#valutaItinerario{
+    margin: 2rem 0 0 1rem;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#valutaItinerario form{
+    display: flex;
+    align-items: center;
+}
+#valutaItinerario h2{
+    width: 100%;
+}
+#valutaItinerario .PlaceRate{
+    margin-right: 2rem;
+    width: 13rem;
+}
+#votoPersonaleItinerario{
+    margin: 2rem 1rem;
+}
+#votoPersonaleItinerarioContent{
+    display: inline-block;
+    font-weight: bold;
+}
+#votoPersonaleItinerarioContent img{
+    width: 2rem;
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+#notLoggedCommento{
+    width: 40%;
+    margin: 2rem 1rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 2rem;
+}
+#notLoggedCommento h2{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+#notLoggedCommento p{
+    display: inline-block;
+}
+
+
+/*****************************************
+*********PULSANTE AGGIUNGI TAPPA**********
+*****************************************/
+#aggiungiTappa{
+    text-align: center;
+    width: 100%;
+}
+#aggiungiTappaContent{
+    width: 20%;
+    height: 100%;
+    margin: 0 auto;
+}
+#aggiungiTappaContent a{
+    text-decoration: none;
+    color: black;
+}
+#aggiungiTappa p{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+#aggiungiTappa img{
+    width: 4rem;
+}
+
+
+/*****************************************
+*********PARTE AREA PERSONALE*************
+*****************************************/
+#profileContainer {
+    display: flex;
+    min-height: 40rem;
+}
+
+/*****************************************
+*********BARRA LATERALE PROFILO***********
+*****************************************/
+#leftBarProfile{
+    background-color: #0c3547;
+    width: 20%;
+    padding-top: 2rem;
+    display: inline-block;
+    float: left;
+    flex-grow: 1;
+    min-height: 40rem;
+}
+#leftBarProfile ul{
+    list-style-type: none;
+    position: sticky;
+    top: 2rem;
+}
+#leftBarProfile a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #fefefe;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    padding-right: 0.2rem;
+}
+#leftBarProfile li:hover{
+    background-color: darkcyan;
+}
+#leftBarProfile li{
+    height: 3.5rem;
+}
+
+/*****************************************
+*********PAGINA DATI PERSONALI************
+*****************************************/
+#rightProfile{
+    width: 80%;
+    height: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+#profilePhotoContainer{
+    width: 30%;
+    display: inline-block;
+}
+#profilePhotoBox{
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#profilePhotoBox img{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+#profilePhotoBox form {
+    width: 100%;
+    margin-top: 1rem;
+}
+#anteprimaFoto{
+    display: none;
+    color: #212121;
+    margin-top: 1rem;
+}
+#photoForm div{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+#profileLevelBox{
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.4rem 1rem;
+    color: #212121;
+}
+#profileLevelBox img{
+    width: 30%;
+}
+#profileDataContainer{
+    width: 60%;
+    background-color: white;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2rem;
+    color: #212121;
+    word-break: break-all;
+}
+#profileDataContainer h1{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.profileDataBox{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.profileDataBox label, .profileDataBox h2{
+    width: 40%;
+}
+.profileDataBox p{
+    width: 60%;
+}
+#profileModificaContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 6px;
+    color: #212121;
+    padding: 1.3rem 1.5rem;
+    margin: 2rem 0;
+}
+#profileModificaContainer h1{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+#modificaDataContainer {
+    width: 100%;
+}
+.profileRadioGender{
+    margin-right: 1rem;
+}
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+.profileDataBox input {
+    width: 40%;
+}
+.profileDataBox fieldset {
+    border: none;
+}
+.profileDataBox fieldset legend {
+    margin-bottom: 0.5rem;
+}
+.profileDataBox input[type="radio"]{
+    width: 1.5rem;
+}
+#profileModificaContainer .profileDataBox h2 {
+    width: 30%;
+}
+.form-style-1 {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+}
+.profileSubmit {
+    background-color: #035c6e;
+    color: white;
+    padding: 0.8rem 0.8rem;
+    margin-top: 0.8rem;
+    border: 1px solid #46a7ae;
+    cursor: pointer;
+    width: 25%;
+    transition: background-color 1s ease;
+}
+.profileSubmit:hover {
+    background-color: #46a7ae;
+}
+
+/*****************************************
+*********PAGINA MIEI COUPON***************
+*****************************************/
+.codiceCoupon{
+    color: #212121;
+    font-weight: bold;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+}
+/***********************************************************************************
+**********************************SMARTPHONE****************************************
+************************************************************************************/
+@media only screen and (max-width:768px), only screen and (min-resolution: 341dpi){
+    body{
+        max-width: unset;
+        min-height: unset;
+        box-shadow: none;
+    }
+    /* Main Navigation */
+    #nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: #035c6e;
+        width: 100%;
+        height: 4rem;
+        border-bottom: 2px solid #fefefe;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        padding: 0.3rem;
+        z-index: 0;
+    }
+    /*le due classi rimangono vuote in quanto da mobile non devono ridefinire nulla, ne aggiungere alcuna regola*/
+    .nav-trasparent{
+
+    }
+    .nav-color{
+
+    }
+    /*nascondere quello laterale*/
+    #logo{
+        display: none;
+    }
+
+    /*MENU AD HAMBURGER E ELEMENTI NAVBAR PRINCIPALE----------------*/
+  #menuBurger{
+      display: block;
+      height: 100%;
+      width: 3.6rem;
+      user-select: none;
+      padding: 0.8rem;
+  }
+  #burger{
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+  }
+  #burger span{
+      display: block;
+      width: 100%;
+      height: 0.35rem;
+      background: #fefefe;
+      border-radius: 0.4rem;
+  }
+  #burger span:last-of-type{
+      margin-bottom: 0;
+  }
+  #menu {
+      display: block;
+      position: fixed;
+      top: 0;
+      left:0;
+      z-index: 3;
+      width: 0;
+      height: 100%;
+      transition: 0.3s;
+      padding-top:4rem;
+      background-color: #035c6e;
+      list-style-type: none;
+      overflow: hidden;
+  }
+  #menu ul, #menu-login ul{
+      display: block;
+  }
+  #menu li
+  {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      text-align: center;
+      padding: 1.5rem 0;
+      font-size: 1.8rem;
+      border-bottom: 3px solid #fff;
+      height: unset;
+  }
+  #menu a
+  {
+    text-decoration: none;
+    color: #fafafa;
+    transition: color 0.3s ease;
+  }
+  #menu a:hover
+  {
+    color: #212121;
+  }
+  .exitButton{
+      position: absolute;
+      top:1.2rem;
+      left:1.2rem;
+      z-index: 2;
+      width: 1.8rem;
+      height: 1.8rem;
+  }
+  .exitButton img{
+      height: 100%;
+      width: 100%;
+  }
+  #logo-mobile{
+      display:flex;
+      align-items: center;
+      height: 100%;
+  }
+  #logo-mobile img, #logo-mobile a{
+      height: 80%;
+  }
+
+
+    /*LOGIN E REGISTRATI SULLA NAVBAR--------------*/
+    #login{
+        display: block;
+        margin-right: 0.5em;
+        height: 100%;
+        float: right;
+    }
+    #user-logo{
+        height: 3.4rem;
+        width: 3.4rem;
+        border: 2px solid #fff;
+        border-radius: 10em;
+        z-index: 3;
+        cursor: pointer;
+    }
+    #menu-login
+    {
+        display: block;
+        position: fixed;
+        top: 0;
+        right:0;
+        z-index: 2;
+        width: 0;
+        height: 100%;
+        transition: 0.3s;
+        padding-top:4rem;
+        background: #035c6e;
+        list-style-type: none;
+        overflow: hidden;
+    }
+    #menu-login a
+    {
+        text-decoration: none;
+        color: #fafafa;
+        transition: color 0.3s ease;
+    }
+    #menu-login a:hover
+    {
+        color: #212121;
+    }
+    #menu-login li
+    {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+        padding: 1.5rem 0;
+        font-size: 1.8rem;
+        border-bottom: 3px solid #fff;
+        height: unset;
+    }
+    #menu-login li img{
+        height: 2.2rem;
+        width: 2.2rem;
+        display: inline-block;
+        float: left;
+        opacity: 1;
+    }
+
+
+    /******************************
+    *********HOMEPAGE**************
+    ******************************/
+    #contenuto{
+        width: 100%;
+    }
+    /*PARTE SUPERIORE---------------------*/
+    #start{
+        background: url("../img/cerca_2.jpg") no-repeat bottom;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        min-height: 20rem;
+        padding: 0.5rem;
+        align-items: unset;
+    }
+    #motto{
+        width: 50%;
+        display: block;
+        float:left;
+        padding: 2rem 0 0 2rem;
+    }
+    #motto .inside-motto-60{
+        display: none;
+    }
+    #motto h1{
+        letter-spacing: 3px;
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    /*AEREOPLANO CON 3 SIMBOLI-------------------------*/
+    #iconBarContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 0.5rem 1rem 0.5rem;
+        justify-content: space-between;
+        background: url("../img/sfondo_plane.jpg") no-repeat;
+        background-size: 100% 100%;
+        height:34rem;
+    }
+    #iconBar{
+        width: 100%;
+        height: 27rem;
+        background: none;
+        border: none;
+    }
+    #bottomIconBar{
+        display: none;
+    }
+    #iconBar a {
+        text-decoration: none;
+    }
+    .iconBox{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap:nowrap;
+        align-items: center;
+        padding: 0.5rem 0;
+        margin-bottom: 5%;
+    }
+    .iconBox:last-of-type{
+        margin-bottom: 0;
+    }
+    .iconContainer{
+        margin: 0 auto;
+        width: 30%;
+    }
+    .iconContainer img{
+        width: 100%;
+        border: 3px solid #e6ffff;
+        border-radius: 10em;
+        display: inline-block;
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.4)
+    }
+    .iconBox p{
+        text-align: center;
+        width:60%;
+        font-size: 1.8rem;
+        margin: 0 auto;
+        display: inline-block;
+        font-weight:bold;
+    }
+    .iconBox:nth-of-type(2) .iconContainer{
+        order: 1;
+    }
+    #iconBarContainer h1, #iconBarContainer h2{
+        display: none;
+    }
+
+    /*CONTENITORE DELLE SPIEGAZIONI CENTRALE--------------*/
+    #introContainer{
+        width: 100%;
+        background-color:#0081af;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border-bottom: 3px solid #fefefe;
+    }
+    .introBox{
+        width: 100%;
+        display: block;
+    }
+    .introBox img {
+        width: 100%;
+        border-radius: 4px;
+    }
+    .introBoxText {
+        margin: 1rem 0 1rem 0;
+        padding: 0 1.2rem;
+        width: unset;
+    }
+    .introBoxText p{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .introBoxText h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    /*TRE SCHEDE DEL COME FUNZIONA---------------------*/
+    #guideContainer{
+        width: 100%;
+        text-align: center;
+        background-color:#0081af;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        margin-top: 0;
+        border-radius: unset;
+    }
+    #guideContainer h1{
+        margin-bottom: 2rem;
+        font-size: 2em;
+        color: unset;
+    }
+    #guideContainer h2{
+        font-size: 1.3em;
+    }
+    #guideBoxContainer{
+        width: 100%;
+        height: 75%;
+        display: block;
+        padding: 0;
+    }
+    .guideBox{
+        width: 100%;
+        margin-top: 0.5rem;
+        background-color: #0b3954;
+        border-radius:4px;
+        border-top:4px solid #e6ffff;
+    }
+    .guideIconContainer{
+        padding: 0.5rem 35%;
+        height: unset;
+    }
+    .guideIconContainer img{
+        width: 100%;
+        border: 3px solid #bfd7ea;
+        border-radius:10rem;
+    }
+    .guideBox p {
+        padding: 1em;
+        height: 40%;
+    }
+
+    /*ULTIME DUE TILES CERCA E CONDIVIDI--------------------------*/
+    #buttonBoxContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: url("../img/sfondo_pulsanti.jpg") no-repeat bottom;
+        background-size: 100% 100%;
+        padding: 1rem 2rem;
+    }
+    .buttonBox{
+        width: 100%;
+        height: 9rem;
+        text-align: center;
+        background-size: cover;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        border: 2px solid white;
+    }
+    .buttonBox:first-of-type{
+        background-image: url("../img/scopri.jpg");
+    }
+    .buttonBox:last-of-type{
+        background-image: url("../img/condividi_2.jpg");
+        margin-bottom: 3rem;
+    }
+    .buttonBox div {
+        background: rgba(255,255,255,0.95);
+        height: 3rem;
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin: 0;
+    }
+    .buttonBox a,.buttonBox a:hover, .buttonBox a:visited{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.13rem;
+        text-decoration: none;
+        color: #212121;
+    }
+    .buttonBox a:active{
+        font-size: 1.3rem;
+    }
+
+
+
+    /*****************************************
+    *************FOOTER***********************
+    *****************************************/
+    #footerContainer{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #footer{
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    #titleFooter {
+        float: none;
+        width: unset;
+    }
+    #menuFooter {
+        width: 100%;
+    }
+    .menuFooterBox {
+        width: 40%;
+    }
+    #footer .social{
+        display: none;
+    }
+    .social{
+        margin-bottom: 0.3rem;
+    }
+    .socialIcon img{
+        margin-bottom: 0;
+    }
+
+    /*****************************************
+    ***************BREADCRUMB*****************
+    *****************************************/
+    #breadcrumb{
+        width: 100%;
+        font-size: 1.2rem;
+        border-bottom: 3px solid #035c6e;
+    }
+
+    /******************************
+    *********PAGINA CONTATTI*******
+    ******************************/
+
+    #startContatti{
+        background: url("../img/contatti_med.jpg") no-repeat bottom;
+        min-height: 20rem;
+    }
+    #mottoContatti {
+        padding-top: 8rem;
+    }
+    #mottoContatti h1{
+        font-size: 3rem;
+    }
+    #contattiContainer{
+        width:100%;
+        display: block;
+    }
+    .contattiBox{
+        width:100%;
+        padding: 2rem 0.5rem 0 0.5rem;
+    }
+    .Contatti{
+        text-align: center;
+    }
+    #contattiContainer .contattiBox:nth-child(2) .Contatti:last-of-type {
+        border-bottom: none;
+    }
+    .contattiBox .Contatti:first-of-type {
+        margin-top: 0.5rem;
+    }
+    #mapContatti {
+        margin-top: 1rem;
+    }
+
+
+    /*****************************************
+    **************POPUP LOGIN*****************
+    *****************************************/
+    .LoginModal {
+        background-color: white;
+        padding: 0;
+    }
+    .LoginContainer {
+        background: unset;
+        width: 100%;
+        height:100%;
+    }
+    .LoginImgContainer {
+        background-color: #46a7ae;
+        height: 6rem;
+    }
+    img.LoginAvatar {
+        height: 4rem;
+    }
+    .LoginClose {
+        font-size: 2.5rem;
+        height: 1rem;
+        color: white;
+    }
+    .LoginInputBox{
+        height: 3rem;
+    }
+    .LoginInputIcon {
+        width: 1.8rem;
+        height: auto;
+        margin-right: 1rem;
+    }
+    .LoginInput{
+        color: black;
+        padding-bottom: 0.6rem;
+        border-color: #46a7ae;
+        height: 1.8rem;
+        font-size: 1rem;
+    }
+    .LoginInput::placeholder{
+        opacity: 0.8;
+    }
+    .LoginInput:focus {
+        border: none;
+    }
+    .LoginPassword {
+        margin: 0;
+    }
+    .LoginViewEye {
+        width: 1.8rem;
+        height: 1.8rem;
+        padding: 0 0 0.1rem 0.2rem;
+        border-bottom: 2px solid #46a7ae;
+        margin-left: 0;
+    }
+    .LoginHr {
+        display: none;
+    }
+
+   /*****************************************
+   *********PARTE AREA PERSONALE*************
+   *****************************************/
+    #profileContainer {
+        display: block;
+        min-height: unset;
+    }
+
+    /*****************************************
+    *********BARRA LATERALE PROFILO***********
+    *****************************************/
+    #leftBarProfile{
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+        float: none;
+        min-height: unset;
+    }
+    #leftBarProfile a {
+        justify-content: center;
+        padding-right: 0.8rem;
+    }
+
+    /*****************************************
+    *********PAGINA DATI PERSONALI************
+    *****************************************/
+    #rightProfile{
+        width: 100%;
+        padding: 2rem 2rem;
+    }
+    #profilePhotoContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    #profileDataContainer{
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .profileDataBox:nth-of-type(5){
+        margin-bottom: 2rem;
+    }
+    .profileDataBox h2{
+        width: 50%;
+    }
+    .profileDataBox p{
+        width: 50%;
+    }
+    #profileModificaContainer{
+        width: 100%;
+    }
+    .profileDataBox input {
+        width: 60%;
+    }
+
+    /*****************************************
+    *********BOX PER ERRORI NON LOGGATO*******
+    *****************************************/
+    #notLoggedContainer{
+        width: 100%;
+    }
+
+
+    /*****************************************
+    *********PAGINE CERCA E MIEI VIAGGI*******
+    *********RAPPRESENTAZIONE ITINERARI*******
+    *****************************************/
+
+    #rightTravels{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0 0 0;
+    }
+    .travelProfileContainer {
+        width: 100%;
+    }
+
+    /*****************************************
+    *********PAGINA CHI SIAMO*****************
+    *****************************************/
+    #startAbout{
+        background: url("../img/chisiamo_small.jpg")  no-repeat ;
+        min-height: 20rem;
+    }
+    #mottoAbout {
+        padding-top: 8rem;
+    }
+    #aboutContainer{
+        width:100%;
+        margin: 1.5rem auto;
+    }
+    .avatar{
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    .avatar figure{
+        width:9rem;
+    }
+
+
+    /*****************************************
+    *********PAGINA CLASSIFICA****************
+    *****************************************/
+    #mottoClassifica h1{
+        font-size: 3rem;
+    }
+	#classificaContainer{
+        width: 100%;
+		padding:0.5rem;
+    }
+	#primoClassifica{
+		width:100%;
+	}
+    .ProfileBoxClassifica img{
+        height: 8rem;
+		border-radius: 50%;
+		max-width: 8rem;
+    }
+	#secondoClassifica, #terzoClassifica{
+		width:100%;
+        float: none;
+	}
+	#tabellaClassifica{
+        font-size: 1rem;
+	}
+	#utenteClassifica{
+        font-size: 1rem;
+	}
+
+    /*****************************************
+    *********PAGINA CERCA*********************
+    *****************************************/
+    #startSearch{
+        background-size: cover;
+        height: 10rem;
+        min-height: unset;
+        border-bottom: none;
+    }
+    #mottoSearch{
+        padding-top: 3rem;
+    }
+    .researchBarContainer{
+        width: 90%;
+    }
+    .reserachBar{
+        width: 80%;
+    }
+    .researchBarContainer button{
+        width: 20%;
+    }
+    .coolFilters{
+        flex-direction: column;
+    }
+    #filtersContainer{
+        width: 100%;
+        display: block;
+        float: none;
+        border-radius: unset;
+    }
+    .spaceContainer{
+        display: none;
+    }
+    .sliderContainer{
+        width: 100%;
+        clear: both;
+        margin: 0 auto 1rem auto;
+    }
+    .slider {
+        width: 100%;
+        display: block;
+        margin: 0.5rem auto;
+    }
+    .sliderContainer label{
+        margin: 0.5rem auto;
+        text-align: center ;
+    }
+    .showSliderValue{
+        display: block;
+        margin: 0.5rem auto;
+    }
+    #buttonCerca{
+        margin: 2rem auto 1rem auto;
+        width: 20%;
+        font-size: 1.5rem;
+        display: block;
+        clear: both;
+    }
+
+    /*****************************************
+    *********PAGINA AGGIUNGI TAPPA*********
+    *****************************************/
+    .LuogoContainer {
+        display: flex;
+        flex-direction: column;
+        margin:1.5rem;
+    }
+    .LuogoTitoloContainer {
+        order:2;
+        height: 3rem;
+    }
+    #LuogoTitolo {
+        margin-left: 2%;
+        font-size: 1.3rem;
+    }
+    #LuogoClose {
+        margin-right: 2%;
+        height: 3rem;
+    }
+    #LuogoClose  a{
+        font-size: 2rem;
+    }
+    .PlaceCenterContainer {
+        order:3;
+        display: block;
+        padding: 1.5rem;
+        width: 100%;
+    }
+    .PlaceInputBox{
+        margin-bottom: 1rem;
+    }
+    .PlaceInput{
+        border-width: 0 0 2px;
+        padding: 0 0 0.4rem 0;
+        border-color: #0b3954;
+    }
+    .PlaceFileBox {
+        margin-bottom: 1rem;
+    }
+    #PlaceFormSeparator {
+        width: 100%;
+        border: 1px solid #0b3954;
+    }
+    #PlaceRatingBox {
+        margin-bottom: 0;
+    }
+    #PlaceDesc {
+        height: 5rem;
+    }
+
+   /*****************************************
+   *********IMPLEMENTAZIONE MAPPA***********
+   *****************************************/
+    .MapContainer {
+        display: block;
+        height: 20rem;
+        width: 100%;
+        float: none;
+    }
+    #map {
+        order:1;
+    }
+
+    /*****************************************
+    *********PAGINA INSERISCI VIAGGIO*********
+    *****************************************/
+    #ViaggioCover {
+        background: url("../img/travelling.png")  no-repeat top;
+        min-height: 28rem;
+    }
+    #ViaggioTitoloCover {
+        background: url("../img/viaggio_small.jpg")  no-repeat top;
+        min-height: 28rem;
+    }
+    #ViaggioFormContainer {
+        width: 100%;
+    }
+    #ViaggioFormTitle {
+        min-height: 4rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .ViaggioInputBox{
+        width:100%;
+        margin-bottom:1.5rem;
+        align-items: end;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ViaggioInputIcon {
+        padding: 0;
+        float: none;
+    }
+    .ViaggioInput{
+        float: none;
+        width: 80%;
+    }
+    #ViaggioCostBox {
+        width: 80%;
+    }
+    .ViaggioTimeBox {
+        width: 100%;
+        padding-left:0;
+        padding-right:0;
+        display: block;
+    }
+    .ViaggioDayHoursBox {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        margin-bottom:1.5rem;
+    }
+    .ViaggioInput {
+        width: 80%;
+    }
+    #ViaggioCostBox {
+        width:100%;
+    }
+    #ViaggioCostBox input {
+        width: 80%;
+        text-align: center;
+    }
+
+
+    /*****************************************
+    *********RAPPRESENTAZIONE TILE TAPPA******
+    *****************************************/
+    .itinerarioTappaContainer {
+        width: 80% ;
+    }
+
+    /*****************************************
+    *********PAGINA VISUALIZZA ITINERARIO*****
+    *****************************************/
+    #rightItinerario{
+        width: 100%;
+    }
+
+    /*****************************************
+    *********SEZIONI COMMENTI*****************
+    *****************************************/
+    #creaCommento form{
+        width: 80%;
+    }
+    #creaCommento textarea{
+        width: 14rem;
+    }
+    /*****************************************
+    ***************PAGINA 404*****************
+    *****************************************/
+
+    .page404 h1{
+        font-size: 2.5rem;
+    }
+    .page404 h2{
+        font-size: 1.5rem;
+    }
+    .page404 img{
+        height: 7rem;
+    }
+
+}
+
+
+/***********************************************************************************
+**********************************TABLET****************************************
+************************************************************************************/
+@media  screen and (min-width: 768px) and (max-width: 1024px) and (max-resolution: 340dpi)
+{
+    /*NAVBAR PRINCIPALE SUPERIORE, COLORATA E NON-------------------*/
+    #nav {
+        max-width: 1920px;
+        width: 100%;
+        padding: 0.5rem;
+        height: 5rem;
+    }
+    .nav-color{
+        background-color: #035c6e;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+    .nav-trasparent {
+        background: transparent;
+        position: absolute;
+        max-width: 1920px;
+        width: 100%;
+    }
+    #nav li{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #nav li a{
+        color: #fff;
+        font-size: 1.3rem;
+        text-align: center;
+        text-decoration: none;
+        padding: 0;
+    }
+    #nav a::after{
+        display: block;
+        position: relative;
+        top: 0.5rem;
+        content: '';
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        border-bottom: solid 3px #fff;
+    }
+    #nav a:hover:after{
+        transform: scaleX(1);
+    }
+    #nav #logo a:hover:after{
+        transform: scaleX(0);
+    }
+
+    /*LOGIN E REGISTRATI SULLA NAVBAR--------------*/
+    #login{
+        margin-right: 1rem;
+        height: 100%;
+        display: inline-block;
+        float:right;
+        padding: 0.5rem 0;
+    }
+    #logo{
+        margin-left: 1.3em;
+        height: 100%;
+        display: inline-block;
+        float:left;
+        padding: 0;
+    }
+    #logo img, #logo a{
+        height: 100%;
+    }
+    #login #user-logo{
+        display: none;
+    }
+    #menu-login li a img{
+        height:2rem;
+    }
+    .login-text{
+        display: none;
+    }
+    #logo-mobile{
+        display: none;
+    }
+    .exitButton{
+        display: none !important;
+    }
+
+
+    /******************************
+    *********HOMEPAGE**************
+    ******************************/
+    #contenuto{
+        width: 100%;
+        background-color: white;
+    }
+    #start{
+        min-height: 26rem;
+    }
+    #motto{
+        padding-left: 2rem;
+        padding-right: 0;
+    }
+    #motto h1{
+        font-size: 2.2rem;
+    }
+    #motto p{
+        font-size: 1.4rem;
+    }
+    #iconBarContainer{
+        margin-top: 0.3rem;
+    }
+    .iconBox img{
+        width: 5rem;
+    }
+    #introContainer {
+        padding: 2rem 1.2rem;
+    }
+    .introBoxText h1{
+        font-size: 1.9rem;
+        margin-bottom: 0.7em;
+    }
+    .guideBox{
+        padding: 1.5rem;
+    }
+    .guideIconContainer{
+        padding: 0.5em 0;
+    }
+    #guideContainer h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .buttonBox div {
+        height: 3.5rem;
+        width: 8rem;
+    }
+
+    /*****************************************
+    *****************FOOTER*******************
+    *****************************************/
+    #menuFooter{
+        width: 60%;
+        justify-content: space-between;
+        display: inline-flex;
+        margin-left: 2rem;
+    }
+    .menuFooterBox {
+        width: 40%;
+    }
+    .menuFooterBox:last-of-type{
+        margin-top: 2rem;
+    }
+    .social{
+        margin-bottom: 0.3rem;
+    }
+    /*BREADCRUMB---------------------------*/
+    #breadcrumb{
+        width: 90%;
+        height: 2.4rem;
+    }
+
+    /******************************
+    *********PAGINA CONTATTI*******
+    ******************************/
+
+    #startContatti{
+        min-height: 26rem;
+    }
+    #mottoContatti {
+        padding-top: 11rem;
+    }
+    #contattiContainer{
+        width:100%;
+    }
+
+    /*****************************************
+    **************POPUP LOGIN*****************
+    *****************************************/
+    .LoginModal {
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+
+    /*****************************************
+    *********BARRA LATERALE PROFILO***********
+    *****************************************/
+    #leftBarProfile{
+        width: 25%;
+    }
+    #leftBarProfile a {
+        padding-right: 0.8rem;
+    }
+
+    /*****************************************
+    *********PAGINA DATI PERSONALI************
+    *****************************************/
+    #profilePhotoContainer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    #profilePhotoBox{
+        width: 45%;
+    }
+    #profileLevelBox{
+        width: 45%;
+    }
+    #profileDataContainer{
+        width: 100%;
+    }
+    .profileDataBox:last-of-type{
+        margin-top: 2rem;
+    }
+    .profileDataBox h2{
+        width: 30%;
+    }
+    .profileDataBox p{
+        width: 50%;
+    }
+    .profileDataBox input {
+        width: 60%;
+    }
+
+    /*****************************************
+    *********PAGINE CERCA E MIEI VIAGGI*******
+    *********RAPPRESENTAZIONE ITINERARI*******
+    *****************************************/
+
+    #rightTravels{
+        height: 100%;
+    }
+    .travelProfileContainer {
+        width: 25rem;
+    }
+
+    /*****************************************
+    *********PAGINA CHI SIAMO*****************
+    *****************************************/
+    #startAbout{
+        background: url("../img/chisiamo_med.jpg") no-repeat ;
+        min-height: 26rem;
+    }
+    #mottoAbout {
+        padding-top: 11rem;
+    }
+    #aboutContainer{
+        width:100%;
+    }
+
+    /*****************************************
+    *********PAGINA CLASSIFICA****************
+    *****************************************/
+    #classificaContainer{
+        width: 100%;
+    }
+
+    /*****************************************
+    *********PAGINA CERCA*********************
+    *****************************************/
+    #startSearch{
+        min-height: 16rem;
+        border-bottom: none;
+    }
+    #mottoSearch{
+        padding-top: 8rem;
+    }
+    .researchBarContainer{
+        width: 80%;
+    }
+    #filtersContainer{
+        width: 100%;
+        display: block;
+        float: none;
+        border-radius: unset;
+    }
+    .spaceContainer{
+        display: none;
+    }
+    .showSliderValue{
+        margin-top: 0.5rem;
+    }
+
+    /*****************************************
+    *********PAGINA INSERISCI VIAGGIO*********
+    *****************************************/
+
+    #ViaggioFormContainer {
+        width: 75%;
+    }
+
+    /*****************************************
+    *********PAGINA AGGIUNGI TAPPA*********
+    *****************************************/
+    .LuogoContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .LuogoTitoloContainer {
+        order:2;
+    }
+    #LuogoTitolo {
+        margin-left: 2%;
+    }
+    .PlaceCenterContainer {
+        order:3;
+        display: block;
+        width: 100%;
+        height: 35rem;
+    }
+    .PlaceInputBox{
+        margin-bottom: 1rem;
+    }
+    .PlaceInput{
+        border-width: 0 0 2px;
+        padding: 0 0 0.4rem 0;
+        border-color: #0b3954;
+    }
+    .PlaceFileBox {
+        margin-bottom: 1rem;
+    }
+    #PlaceDesc {
+        height: 5rem;
+    }
+
+    /*****************************************
+    *********IMPLEMENTAZIONE MAPPA***********
+    *****************************************/
+    .MapContainer {
+        display: block;
+        height: 20rem;
+        width: 100%;
+        float: none;
+    }
+    #map {
+        order:1;
+    }
+
+    /*****************************************
+    ***************PAGINA 404*****************
+    *****************************************/
+
+    .page404 img{
+        height: 15rem;
+    }
+
+
+    /*******************************************
+    ***VISUALIZZAZIONE MENU MOBILE NO SCRIPT****
+    *******************************************/
+    #mobileNoScript{
+        display: none;
+    }
+    #mobileLoginReplacement, #mobileMenuReplacement{
+        display: none;
+    }
+}
+
+
+/***********************************************************************************
+**********************************DESKTOP*******************************************
+************************************************************************************/
+@media screen and (min-width: 1024px) and (max-resolution: 340dpi){
+
+    /*NAVBAR PRINCIPALE SUPERIORE, COLORATA E NON-------------------*/
+    #nav {
+        max-width: 1920px;
+        width: 100%;
+        padding: 0.5rem;
+        height: 5rem;
+    }
+    .nav-color{
+        background-color: #035c6e;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+    .nav-trasparent {
+        background: transparent;
+        position: absolute;
+        max-width: 1920px;
+        width: 100%;
+    }
+    #nav li{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #nav li a{
+        color: #fff;
+        font-size: 1.3rem;
+        text-align: center;
+        text-decoration: none;
+        padding: 0;
+    }
+    #nav a::after{
+        display: block;
+        position: relative;
+        top: 0.5rem;
+        content: '';
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        border-bottom: solid 3px #fff;
+    }
+    #nav a:hover:after{
+        transform: scaleX(1);
+    }
+    #nav #logo a:hover:after{
+        transform: scaleX(0);
+    }
+
+    /*LOGIN E REGISTRATI SULLA NAVBAR--------------*/
+    #login{
+        margin-right: 1rem;
+        height: 100%;
+        display: inline-block;
+        float:right;
+        padding: 0.5rem 0;
+    }
+    #logo{
+        margin-left: 1.3em;
+        height: 100%;
+        display: inline-block;
+        float:left;
+        padding: 0;
+    }
+    #logo img, #logo a{
+        height: 100%;
+    }
+    #login #user-logo{
+        display: none;
+    }
+    #menu-login li a img{
+        height:1.5rem;
+    }
+    .login-text{
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+    #logo-mobile{
+        display: none;
+    }
+    .exitButton{
+        display: none !important;
+    }
+
+
+    /*******************************************
+    ***VISUALIZZAZIONE MENU MOBILE NO SCRIPT****
+    *******************************************/
+    #mobileNoScript{
+        display: none;
+    }
+    #mobileLoginReplacement, #mobileMenuReplacement{
+        display: none;
+    }
+
+}
+
+
+@media print {/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    body {
+        width: 100%;
+    }
+
+    /******************************
+    *********HOMEPAGE**************
+    ******************************/
+    #nav {
+        display: none;
+    }
+    #contenuto{
+        width: 100%;
+        background: none;
+    }
+    #motto{
+        width: 100%;
+        padding-left: 2rem;
+    }
+    #motto h1{
+        color: unset;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    #motto p{
+        display: none;
+    }
+    #iconBarContainer{
+        margin-top: 0.3rem;
+        color: unset;
+    }
+    #iconBar{
+        border: 1px solid black;
+        background: unset;
+    }
+    .iconBox img{
+        display: none;
+    }
+    #iconBar h1{
+        font-size: 1.8em;
+    }
+    #bottomIconBar{
+        display: none;
+    }
+    #introContainer {
+        padding: 2rem 1.2rem;
+    }
+    .introBoxText{
+        width: 100%;
+    }
+    .introBoxText h1{
+        font-size: 1.9rem;
+        margin-bottom: 0.7em;
+    }
+    .introBox img{
+        display: none;
+    }
+    #guideBoxContainer{
+        padding: 0 3rem 0.5rem 3rem;
+    }
+    .guideBox{
+        background: none;
+        padding: 1.5rem;
+    }
+    .guideIconContainer{
+        display:none;
+    }
+    .guideIconContainer img{
+        display:none;
+    }
+    #guideContainer h1{
+        color: unset;
+        margin-bottom: 0.5rem;
+    }
+    #guideContainer h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    #buttonBoxContainer{
+        width: 100%;
+        display: flex;
+        padding: 0;
+        background: none;
+    }
+    .buttonBox{
+        display: none;
+    }
+
+    /*****************************************
+    *************FOOTER***********************
+    *****************************************/
+    #footerContainer{
+        display: none;
+    }
+
+    /*****************************************
+    ***************BREADCRUMB*****************
+    *****************************************/
+    #breadcrumb{
+        width: 90%;
+        height: 2.4rem;
+        font-size: 0.8rem;
+    }
+    #breadcrumb ol, #breadcrumb li, #breadcrumb span, #breadcrumb a{
+        display: inline-block;
+        height: 100%;
+    }
+
+
+    .backToTop{
+        display:none;
+    }
+
+    /******************************
+    *********PAGINA CONTATTI*******
+    ******************************/
+    #startContatti{
+        min-height: 5rem;
+    }
+    #mottoContatti {
+        padding-top: 1rem;
+    }
+    #contattiContainer{
+        width:100%;
+        background: none;
+        color: unset;
+    }
+    .Contatti{
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .contattiBox:first-of-type .Contatti:last-of-type{
+        display: none;
+    }
+    .Contatti p{
+        font-size: 1.2rem;
+    }
+    #mapContatti {
+        display:none;
+    }
+
+    /*****************************************
+    *********PAGINA CHI SIAMO*****************
+    *****************************************/
+    #startAbout{
+        min-height: 0.5rem;
+    }
+    #mottoAbout {
+        padding-top: 1rem;
+    }
+    #aboutContainer{
+        width:100%;
+        margin: 0 auto 0.5rem auto;
+        display:flex;
+        background: none;
+        color: unset;
+    }
+    .aboutBox{
+        padding: 0.5rem 2.5rem 0 2.5rem;
+    }
+    .about{
+        margin-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .about p{
+        font-size: 1.2rem;
+    }
+    .avatar figure{
+        display: none;
+    }
+
+    /*****************************************
+    *********PAGINA CLASSIFICA****************
+    *****************************************/
+    #startClassifica{
+        display:none;
+    }
+    #classificaContainer{
+        width: 100%;
+        background: none;
+        color: unset;
+    }
+    .ProfileBoxClassifica img{
+        display: none;
+    }
+    #tabellaClassifica td, th{
+        padding:0 0.5rem 0.5rem 0.5rem;
+    }
+
+
+    /*****************************************
+    *********BARRA LATERALE PROFILO***********
+    *****************************************/
+    #leftBarProfile{
+        display:none;
+    }
+
+
+    /*****************************************
+    *********PAGINA DATI PERSONALI************
+    *****************************************/
+    #profilePhotoContainer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    #profilePhotoBox{
+        width: 45%;
+    }
+    #profileLevelBox{
+        width: 45%;
+    }
+    #profileDataContainer{
+        width: 100%;
+    }
+    .profileDataBox:last-of-type{
+        margin-top: 2rem;
+    }
+    .profileDataBox h2{
+        width: 30%;
+    }
+    .profileDataBox p{
+        width: 50%;
+    }
+
+    /*****************************************
+    *********BOX PER ERRORI NON LOGGATO*******
+    *****************************************/
+    #notLoggedContainer{
+        width: 70%;
+        height: 25rem;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    #notLoggedContainer p{
+        font-size: 1.3rem;
+    }
+    #notLoggedContainer img{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    /*****************************************
+    *********PAGINA INSERISCI VIAGGIO*********
+    *****************************************/
+    #ViaggioCover {
+        display:none;
+    }
+    #ViaggioTitoloCover {
+        display:none;
+    }
+    #ViaggioFormContainer {
+        color: unset;
+        background: none;
+        width: 75%;
+    }
+    .leftTravelProfileBox img{
+    	display:none;
+    }
+    .materialButton{
+    	display:none;
+    }
+    .searchContent{
+    	display:block;
+    }
+    .autoreItinerario img{
+    	display:none;
+    }
+    #rightTravels{
+    	display:block;
+    }
+    #profileContainer{
+    	display:block;
+    }
+    .itinerarioTappaContainer{
+    	width: 15rem;
+    }
+    .leftTappaBox img{
+    	display:none;
+    }
+    #rightTopItinerario{
+    	display:block;
+    }
+    #rightTappa{
+    	display:block;
+    }
+    .tappaFeat img{
+    	width:4rem;
+    }
+    #containerCommenti img{
+    	display:none;
+    }
+    .commentoContainer{
+    	display:block;
+    }
+    #rightTravels{
+        width:100%;
+    }
+}
+

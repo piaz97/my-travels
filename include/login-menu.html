@@ -1,0 +1,42 @@
+<noscript><a id="mobileLoginReplacement" href="#mobileNoScriptLogin"></a></noscript>
+<div id="login">
+    <!-- dopo sostituire con una parte in php che cambia la classe e l'immagine del profilo -->
+    <img id="user-logo" onclick="openNav('menu-login');" src="img/user.svg" alt=""/>
+    <div id="menu-login">
+        <a href="javascript:closeNav('menu-login')"  class="exitButton">
+            <img src="img/close.svg" alt=""/>
+        </a>
+        <ul>
+            <li  id="loginLink">
+                <noscript>
+                    <a tabindex="6" href="login-page.php">
+                        <img src="img/log-in.svg" alt=""/>
+                        <div class="login-text">Accedi</div>
+                    </a>
+                </noscript>
+                <div class="script">
+                    <a tabindex="6" href="javascript:openpopup('logincanvas')">
+                        <img src="img/log-in.svg" alt=""/>
+                        <div class="login-text">Accedi</div>
+                    </a>
+                </div>
+            </li>
+            <li id="registrationLink">
+                <noscript>
+                    <a tabindex="7" href="registrazione-page.php">
+                        <img src="img/add-user.svg" alt="" />
+                        <div class="login-text">Registrati</div>
+                    </a>
+                </noscript>
+                <div class="script">
+                    <a tabindex="7" href="javascript:openpopup('registrazionecanvas')">
+                        <img src="img/add-user.svg" alt="" />
+                        <div class="login-text">Registrati</div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+</div>
